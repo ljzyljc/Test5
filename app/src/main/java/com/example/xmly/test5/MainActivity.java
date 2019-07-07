@@ -30,17 +30,21 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        List<String> list = new ArrayList<>();
-        list.add("1");
-        list.add("2");
-        for (String item : list) {
-            Log.i(TAG, "onCreate: --0--");
-            if (item.equals("1")){
-                Log.i(TAG, "onCreate: --------remove-----");
-                System.out.println(item);
-                list.remove(item);
-            }
-        }
+
+
+
+
+//        List<String> list = new ArrayList<>();
+//        list.add("1");
+//        list.add("2");
+//        for (String item : list) {
+//            Log.i(TAG, "onCreate: --0--");
+//            if (item.equals("1")){
+//                Log.i(TAG, "onCreate: --------remove-----");
+//                System.out.println(item);
+//                list.remove(item);
+//            }
+//        }
 //        Log.i(TAG, "onCreate: --jackie---");
 //
 ////        Intent service = new Intent(this, CarAndHomeJobService.class);

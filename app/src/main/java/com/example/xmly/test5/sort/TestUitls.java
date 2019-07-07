@@ -6,7 +6,8 @@ public class TestUitls {
 
     public static void main(String[] args) {
         int[] arr = new int[]{93, 4, 55, 6, 1, 9, 38};
-        quickSort(arr, 0, arr.length - 1);
+//        quickSort(arr, 0, arr.length - 1);
+        quickSortJackie(arr,0,arr.length-1);
         System.out.println(Arrays.toString(arr));
 //        System.out.println("----");
     }
@@ -78,5 +79,55 @@ public class TestUitls {
         return left;
 
     }
+
+
+    public static int partation(int arr[],int left,int right){
+        int base = arr[left];
+        while (left < right){
+            while (left < right && arr[right] <= base){
+                right--;
+            }
+            arr[left] = arr[right];
+            while (left < right && arr[left] >= base){
+                left++;
+            }
+            arr[right] = arr[left];
+        }
+        arr[left] = base;
+        return left;
+    }
+
+    public static void quickSortJackie(int[] arr,int left,int right){
+        if (left < right) {
+            int divider = partation(arr, left, right);
+            quickSortJackie(arr, left, divider - 1);
+            quickSortJackie(arr, divider + 1, right);
+        }
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 }
